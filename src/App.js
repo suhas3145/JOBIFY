@@ -1,7 +1,9 @@
-
+import Landing from "./pages/Landing"
 function App() {
   return (
-    <h1>jobify</h1>
+    <div>
+    <Landing/>
+    </div>
   );
 }
 
