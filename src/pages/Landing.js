@@ -1,6 +1,7 @@
 import logo from '../assets/images/logo.svg'
 import main from '../assets/images/main.svg'
-import styled from 'styled-components'
+import Wrapper from '../assets/wrappers/Testing'
+
 const Landing = () => {
   return (
      <Wrapper>
