@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-import {Logo,FormRow} from '../assets/components'
+import {Logo,FormRow,Alert} from '../assets/components'
 import Wrapper from '../assets/wrappers/RegisterPage'
 
 
@@ -8,9 +8,11 @@ const initialState={
   email:'',
   password:'',
   isMember:true,
+  showAlert:false,
 }
 
 const Register = () => {
+  
   const [values,setValues]=useState(initialState)
 
 
@@ -28,6 +30,7 @@ const Register = () => {
       <Logo/>
 
       <h3>Login</h3>
+      {values.showAlert && <Alert/>}
        <FormRow type="text" name="Name" value={values.name} handleChange={handleChange}/>
        <FormRow type="email" name="Email" value={values.email} handleChange={handleChange}/>
        <FormRow type="password" name="Password" value={values.password} handleChange={handleChange}/>
